@@ -1,1 +1,1 @@
-# Multithreaded_Sodoku_Checker
+# Multithreaded_Sudoku_Checker

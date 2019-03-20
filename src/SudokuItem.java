@@ -21,4 +21,8 @@ public class SudokuItem {
     return y;
   }
 
+  public String toString(){
+    return Integer.toString(value);
+  }
+
 }

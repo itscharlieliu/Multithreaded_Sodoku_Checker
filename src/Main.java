@@ -4,7 +4,7 @@ public class Main {
 
     SudokuBoard sudokuBoard = new SudokuBoard("./input/test1.txt");
 
-//    SudokuChecker rowChecker = new SudokuChecker(sudokuBoard);
-//    rowChecker.start();
+    SudokuChecker rowChecker = new SudokuChecker(sudokuBoard.getBoard()[0]);
+    rowChecker.run();
   }
 }

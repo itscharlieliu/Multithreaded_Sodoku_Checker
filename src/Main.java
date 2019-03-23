@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Main {
-  
+
   /**
    * Main.java
    * <p>
@@ -46,6 +46,10 @@ public class Main {
 
     List<SudokuItem> finalCorrections = sudokuCorrection.getFinalCorrections();
     System.out.println("-------------------------------------------------------------------------");
+    if (finalCorrections.size() == 0)
+    {
+      System.out.println("Final Answer: No errors");
+    }
     for (SudokuItem sudokuItem: finalCorrections) {
       System.out.println("Final Answer: " + sudokuItem);
     }

@@ -11,7 +11,9 @@ class SudokuBoard {
     String[] boardArrayFromInput = FileIO.inputFromFile(filePath).split("[,\n]");
 
     if (boardArrayFromInput.length != 89) {
-      System.out.println("Input file syntax error: input must contain a 9 by 9 board delimited by commas.");
+      System.out.println(
+          "Input file syntax error: input must contain a 9 by 9 board delimited by commas."
+      );
       return;
     }
 
@@ -20,7 +22,11 @@ class SudokuBoard {
     int boardArrayIdx = 0;
     for (int row = 0; row < 9; ++row) {
       for (int col = 0; col < 9; ++col) {
-        tempBoard[row][col] = new SudokuItem(Integer.valueOf(boardArrayFromInput[boardArrayIdx]), row, col);
+        tempBoard[row][col] = new SudokuItem(
+            Integer.valueOf(boardArrayFromInput[boardArrayIdx]),
+            col + 1,
+            row + 1
+        );
         ++boardArrayIdx;
       }
       ++boardArrayIdx;
@@ -40,7 +46,7 @@ class SudokuBoard {
     }
   }
 
-  public SudokuItem[][] getBoard() {
+  SudokuItem[][] getBoard() {
     return board;
   }
 }

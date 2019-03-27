@@ -8,4 +8,4 @@
 
 ### Instructions for use:
 1. Run ```javac *.java```
-2. Pass in the filepath for the test cases as an argument
+2. Pass in the filepath for the test cases as an argument: ```java Main ./input/test1.txt```
